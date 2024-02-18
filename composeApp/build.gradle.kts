@@ -69,10 +69,20 @@ compose.desktop {
         mainClass = "MainKt"
 
         nativeDistributions {
-            modules("java.instrument", "jdk.unsupported")
+            modules("java.instrument", "java.sql", "jdk.unsupported")
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.darwin.doggostudy"
+            packageName = "DoggoStudy"
             packageVersion = "1.0.0"
+
+            windows {
+                shortcut = true
+            }
+        }
+
+        buildTypes.release {
+            proguard {
+                configurationFiles.from("./proguard-rules.pro")
+            }
         }
     }
 }
