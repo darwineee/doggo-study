@@ -1,0 +1,29 @@
+import kotlin.Int;
+import kotlin.Float;
+
+CREATE TABLE IF NOT EXISTS TestAnalytics(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    submitAt INTEGER NOT NULL,
+    numCorrect INTEGER AS Int NOT NULL,
+    numTotal INTEGER AS Int NOT NULL,
+    consumedTime REAL AS Float NOT NULL,
+    correctRate REAL AS Float NOT NULL,
+    avgSpeed REAL AS Float NOT NULL
+);
+
+getAll:
+SELECT * FROM TestAnalytics;
+
+insert:
+INSERT INTO TestAnalytics(
+    submitAt,
+    numCorrect,
+    numTotal,
+    consumedTime,
+    correctRate,
+    avgSpeed
+)
+VALUES (?,?,?,?,?,?);
+
+deleteAll:
+DELETE FROM TestAnalytics;

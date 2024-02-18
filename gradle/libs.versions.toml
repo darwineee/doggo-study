@@ -1,0 +1,38 @@
+[versions]
+compose-plugin = "1.5.12"
+kotlin = "1.9.22"
+kotlin-coroutine = "1.7.3"
+kotlin-serialization = "1.6.2"
+voyager = "1.0.0"
+aayChart = "Beta-0.0.5"
+sqlDelight = "2.0.1"
+letsplot-kotlin = "4.6.0"
+letsplot-multiplatform = "4.2.0"
+letsplot-skia = "1.0.2"
+
+[libraries]
+aayChart = { module = "io.github.thechance101:chart", version.ref = "aayChart" }
+
+kotlin-coroutine-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutine" }
+kotlin-coroutine-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlin-coroutine" }
+kotlin-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlin-serialization" }
+
+voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+voyager-screenModel = { module = "cafe.adriel.voyager:voyager-screenmodel", version.ref = "voyager" }
+voyager-navigator-bottomsheet = { module = "cafe.adriel.voyager:voyager-bottom-sheet-navigator", version.ref = "voyager" }
+voyager-navigator-tab = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
+voyager-transition = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
+
+sqldelight-jvmdriver = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqlDelight" }
+sqldelight-adapter = { module = "app.cash.sqldelight:primitive-adapters", version.ref = "sqlDelight" }
+
+letsplot-kernel = { module = "org.jetbrains.lets-plot:lets-plot-kotlin-kernel", version.ref = "letsplot-kotlin" }
+letsplot-common = { module = "org.jetbrains.lets-plot:lets-plot-common", version.ref = "letsplot-multiplatform" }
+letsplot-awt = { module = "org.jetbrains.lets-plot:platf-awt", version.ref = "letsplot-multiplatform" }
+letsplot-compose = { module = "org.jetbrains.lets-plot:lets-plot-compose", version.ref = "letsplot-skia" }
+
+[plugins]
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+sqlDelight = { id = "app.cash.sqldelight", version.ref = "sqlDelight" }
